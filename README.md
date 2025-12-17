@@ -89,7 +89,7 @@ npm start
 
 Jameela Shaik 
 
-Project Link: [https://github.com/yourusername/my-portfolio](https://github.com/yourusername/my-portfolio)
+Project Link: (https://myportfolio-zeta-plum.vercel.app/)
 
 ## Acknowledgments
 
