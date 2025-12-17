@@ -1,0 +1,66 @@
+/* Main layout container */
+main {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  min-height: 80vh;
+  
+  /* Enhanced styling */
+  display: flex;
+  flex-direction: column;
+  
+  /* Smooth transitions */
+  animation: fadeIn 0.4s ease-in-out;
+  
+  /* Better spacing and typography */
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Fade-in animation for smooth page transitions */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  main {
+    padding: 1.5rem 1rem;
+    min-height: 85vh;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 1rem 0.75rem;
+    min-height: 90vh;
+  }
+}
+
+/* Focus visible for accessibility */
+main *:focus-visible {
+  outline: 2px solid #4a90e2;
+  outline-offset: 2px;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ensure children content flows properly */
+main > * {
+  margin-bottom: 1rem;
+}
+
+main > *:last-child {
+  margin-bottom: 0;
+}

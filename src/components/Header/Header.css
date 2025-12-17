@@ -1,0 +1,135 @@
+/* Global box-sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* HEADER WRAPPER */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0.9rem 3rem;
+  background: rgba(255, 255, 255, 0.85);  /* soft translucent */
+  backdrop-filter: blur(8px);             /* premium blur */
+  -webkit-backdrop-filter: blur(8px);
+
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+
+  transition: background 0.3s ease, padding 0.3s ease;
+}
+
+/* LOGO */
+.logo {
+  font-size: 1.55rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;      /* modern compact font look */
+  color: #111;
+}
+
+/* NAVIGATION */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.nav a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  text-decoration: none;
+  color: #444;
+  font-size: 1rem;
+  font-weight: 500;
+  position: relative;
+  padding: 4px 0;
+
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+/* HOVER UNDERLINE ANIMATION */
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+
+  width: 0%;
+  height: 2px;
+  background: #111;
+  border-radius: 2px;
+
+  transition: width 0.25s ease;
+}
+
+.nav a:hover {
+  color: #000;
+  transform: translateY(-2px);
+}
+
+.nav a:hover::after {
+  /* width: 100%; */
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent) 0%, var(--success) 100%);
+  border-radius: 2px;
+}
+
+/* OPTIONAL ACTIVE LINK STYLE (if you want later) */
+.nav a.active {
+  color: #000;
+}
+
+
+.nav a.active::after {
+  width: 100%;
+}
+
+/* RESUME BUTTON */
+.resume-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  border: 1px solid #111;
+  padding: 8px 16px;
+  border-radius: 8px;
+
+  text-decoration: none;
+  color: #111;
+  font-weight: 600;
+  background: #fff;
+
+  transition: 0.28s ease;
+}
+
+.resume-btn:hover {
+  background: #111;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+
+  .header {
+    padding: 0.8rem 1.5rem;
+  }
+}

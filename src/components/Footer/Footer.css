@@ -1,0 +1,47 @@
+/* Reset box sizing for predictable layout */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Footer Wrapper */
+.site-footer {
+  background: #f9fafb;            /* Soft modern light background */
+  padding: 2rem 1.5rem;
+  border-top: 1px solid #e5e7eb;  /* Subtle top border */
+  color: #1a1a1a;
+  text-align: center;
+  font-family: inherit;
+}
+
+/* Inner container */
+.footer-inner {
+  max-width: 900px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* Year + tagline text */
+.footer-inner div {
+  line-height: 1.4;
+}
+
+/* Hover subtlety if needed */
+.footer-inner div:hover {
+  color: #111;
+  transition: 0.3s;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .footer-inner {
+    font-size: 0.9rem;
+  }
+}
